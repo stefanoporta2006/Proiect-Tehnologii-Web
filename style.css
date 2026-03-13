@@ -1,0 +1,298 @@
+* {
+
+    image-rendering: pixelated;
+    user-select: none;
+
+}
+
+@font-face {
+    font-family: 'CourierPrime';
+    src: url('CourierPrime-Regular.ttf') format('truetype');
+}
+
+body {
+    background-image: url('index.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: whitesmoke;
+
+    font-family: CourierPrime, monospace;
+    margin-top: 25vh;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: lighter;
+    font-kerning: none;
+}
+
+body.store {
+    background-image: url('observatii.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: whitesmoke;
+
+    font-family: CourierPrime, monospace;
+    margin-top: 25vh;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: lighter;
+    font-kerning: none;
+}
+
+body.cer {
+    background-image: url('cer2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(95, 0, 95);
+
+    font-family: CourierPrime, monospace;
+    margin-top: 25vh;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: lighter;
+    font-kerning: none;
+}
+
+body.pamant {
+    background-color: black;
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+
+    font-family: CourierPrime, monospace;
+    margin-top: 25vh;
+    font-size: 3vh;
+    text-align: center;
+    font-weight: lighter;
+    font-kerning: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.sel, a.sel:hover {
+    color: cornflowerblue;
+}
+
+
+
+a:hover {
+    color:aqua;
+    animation: resize .1s forwards;
+}
+
+@keyframes resize {
+    0% { font-size: 1em}
+    100% { font-size: 1.1em}
+}
+
+.frunza {
+    height: 12vh;
+    width: auto;
+    filter: hue-rotate(-40deg);
+    opacity: 0.6;
+}
+
+.sparkle{
+    position: absolute;
+    z-index: 1;
+}
+
+.titlu {
+    animation: rotateTitlu 10s ease-in-out infinite;
+}
+
+
+@keyframes rotateTitlu {
+    0% { font-size: 8vh; rotate: 1deg;}
+    50% { font-size: 8.5vh; rotate: -1deg;}
+    100% { font-size: 8vh; rotate: 1deg;}
+} 
+
+.sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+    filter: contrast(400%);
+}
+
+.cer1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.cer2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: .2;
+    z-index: -2;
+    filter: blur(3px);
+}
+
+.dandelion {
+    position: fixed;
+    height: 50vh;
+    width: auto;
+    bottom: 7vh;
+    right: 10vw;
+    opacity: 0.9;
+    transform-origin: bottom right;
+    filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.185));
+    animation: dandelion 5s ease-in-out infinite;
+}
+
+.dandelionshadow {
+    position: fixed;
+    height: auto;
+    width: 50vh;
+    bottom: 7vh;
+    right: 10vw;
+    opacity: 0.15;
+    transform-origin: bottom right;
+    filter: drop-shadow(1vh 1vh 1vh rgba(0, 0, 0, 0.185)) blur(2px);
+    animation: dandelion 5s ease-in-out infinite;
+}
+
+.dandelionseed {
+    height: 30vh;
+    width: auto;
+    opacity: .9;
+    filter: drop-shadow(1vh 1vh 1vh rgb(255, 255, 255)) ;
+}
+
+@keyframes dandelion{
+    0% { transform: rotate(3deg) }
+    50% { transform: rotate(-10deg) }
+    100% { transform: rotate(3deg) }
+}
+
+.watermark {
+    position: fixed;
+    bottom: 1vh;
+    left: 1vw;
+    font-size: small;
+    color: whitesmoke;
+    opacity: 0.4;
+}
+
+table{
+  margin-left: 13vw;
+  margin-right: 10vw;
+  margin-top: 8vh;
+  font-size: 2.5vh;
+  font-weight: bold;
+  background-color: rgba(1, 1, 1, .3);
+  z-index: 2;
+  
+}
+
+table img {
+    height: 20vh;
+    width: auto;
+    background-color: rgba(1, 1, 1, .3);
+}
+
+td {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  text-align: center;
+  border-bottom: 0.3vh solid whitesmoke;
+}
+
+.tableheader {
+    font-weight: lighter;
+    opacity: 0.7;
+}
+
+.clickbait {
+    animation: clickbait .7s infinite;
+}
+
+.clickbait:hover {
+    animation: none;
+}
+
+@keyframes clickbait {
+    0% { transform: scale(1) rotate(5deg); color: inherit}
+    50% { transform: scale(1.2) rotate(-5deg); color: red}
+    100% { transform: scale(1) rotate(5deg); color: inherit}
+}
+
+
+.pam {
+    position: absolute;
+    left: 15vw;
+    right: 15vw;
+    top: 10vh;  
+    bottom: 10vh;   
+}
+
+
+
+.pamimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    position: absolute;
+    background-color: transparent;
+    border-color: rgba(255, 0, 0, 0.493);
+    border-width: 5px;
+    z-index: 2;
+}
+
+button:hover {
+    cursor: zoom-in;
+}
+
+.tedi{
+animation: tediAnim 4s ease-in-out forwards;
+}
+
+@keyframes tediAnim {
+    0% { transform: translate(0vw, 0vh) }
+    50% { transform: translate(0vw, -30vh) }
+    100% { transform: translate(20vw, -5vh) }
+}
+
+
+.batonulcopilariei{
+animation: batonulcopilarieiAnim 8s ease-in-out forwards;
+}
+
+@keyframes batonulcopilarieiAnim {
+    0% { transform: translate(0vw, 0vh) }
+    50% { transform: translate(0vw, 0vh) }
+    75% { transform: translate(0vw, -15vh) }
+    100% { transform: translate(-20vw, -5vh) }
+}
+
+.congrats{
+    animation: congratsAnim 1s ease-in-out infinite;
+}
+
+@keyframes congratsAnim {
+    0% { transform: scale(1) rotate(5deg); color: red}
+    50% { transform: scale(1.4) rotate(-5deg); color: rgb(238, 255, 0)}
+    100% { transform: scale(1) rotate(5deg); color: red}
+}
